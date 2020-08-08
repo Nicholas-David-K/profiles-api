@@ -15,7 +15,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
         }
 
     def create(self, validated_data):
-        user = settings.AUTH_USER_MODEL.objects.create_user(
+        user = UserProfile.objects.create_user(
             email = validated_data['email'],
             name = validated_data['name'],
             password = validated_data['password']
