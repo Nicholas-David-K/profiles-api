@@ -19,8 +19,11 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-
+    # Profiles API
     path('api/', include('profiles.api.urls')),
+
+    # Feed API
+    path('api/', include('feed.api.urls')),
 
     # Login via rest
     path('api/rest-auth/', include('rest_auth.urls')),
