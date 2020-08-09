@@ -22,6 +22,9 @@ urlpatterns = [
 
     path('api/', include('profiles.api.urls')),
 
-    # Login via browsable api
+    # Login via rest
     path('api/rest-auth/', include('rest_auth.urls')),
+
+    # Login via browsable api
+    path('api-auth/', include('rest_framework.urls'))
 ]
